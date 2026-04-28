@@ -1,0 +1,9 @@
+{
+  "name": "@opencloud/branding",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'build not yet implemented'",
+    "type-check": "tsc --noEmit"
+  }
+}
