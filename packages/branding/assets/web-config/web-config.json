@@ -1,0 +1,33 @@
+{
+  "server": "https://cloud.opencloud.test/",
+  "theme": "https://cloud.opencloud.test/themes/opencloud/theme.json",
+  "openIdConnect": {
+    "metadata_url": "https://cloud.opencloud.test/.well-known/openid-configuration",
+    "authority": "https://cloud.opencloud.test",
+    "client_id": "web",
+    "response_type": "code",
+    "scope": "openid profile email"
+  },
+  "apps": [
+    "files",
+    "search",
+    "text-editor",
+    "pdf-viewer",
+    "external",
+    "admin-settings",
+    "epub-reader",
+    "preview",
+    "app-store"
+  ],
+  "options": {
+    "contextHelpersReadMore": true,
+    "tokenStorageLocal": true,
+    "embed": {},
+    "concurrentRequests": {
+      "shares": {}
+    }
+  },
+  "styles": [
+    { "href": "themes/opencloud/inter.css" }
+  ]
+}
