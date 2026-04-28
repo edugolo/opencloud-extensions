@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Placeholder login-achtergrond voor OpenCloud IDP.
+  Per ADR-0007 §127: SVG voor geometrisch/abstract beeld.
+  Vervang dit bestand door productie-asset zonder code-changes elders.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1" fill="none">
+    <circle cx="400" cy="800" r="120"/>
+    <circle cx="1500" cy="200" r="180"/>
+    <circle cx="1700" cy="900" r="90"/>
+  </g>
+</svg>

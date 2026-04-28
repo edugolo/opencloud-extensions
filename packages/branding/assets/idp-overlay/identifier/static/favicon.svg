@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Placeholder favicon voor OpenCloud login.
+  Vervangbaar zonder code-changes; behoud bestandsnaam favicon.svg.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#3b82f6"/>
+  <path d="M9 14a7 7 0 0 1 14 0v1h-3v-1a4 4 0 0 0-8 0v1H9v-1z" fill="#fff"/>
+  <rect x="8" y="14" width="16" height="11" rx="2" fill="#fff"/>
+</svg>
