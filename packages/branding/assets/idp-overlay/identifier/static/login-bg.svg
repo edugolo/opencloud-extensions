@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Placeholder login-achtergrond voor OpenCloud IDP.
-  Per ADR-0007 §127: SVG voor geometrisch/abstract beeld.
-  Vervang dit bestand door productie-asset zonder code-changes elders.
+  Login-achtergrond voor OpenCloud IDP — licht thema, kleurmatch met POC-logo (#20434f).
+  Per ADR-0007 §127: SVG voor geometrisch/abstract beeld, vervangbaar zonder code-changes.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a8a"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="#f4f7f8"/>
+      <stop offset="100%" stop-color="#dfe9ec"/>
     </linearGradient>
-    <radialGradient id="glow" cx="30%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    <radialGradient id="glow" cx="20%" cy="10%" r="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <g id="mark" fill="#20434f">
+      <polygon points="255.98 342.75 271.89 333.57 271.89 267.12 329.08 234.1 329.08 215.78 313.18 206.6 255.6 239.84 198.83 207.06 182.93 216.24 182.93 234.56 240.12 267.58 240.12 333.59 255.98 342.75"/>
+      <polygon points="401.95 150.82 256 66.56 256 66.56 256 66.56 110.05 150.82 110.05 187.5 256 103.24 401.95 187.5 401.95 150.82"/>
+      <polygon points="401.95 324.5 256 408.76 110.06 324.5 110.06 361.17 256 445.43 256 445.43 256 445.43 401.95 361.17 401.95 324.5"/>
+    </g>
   </defs>
   <rect width="1920" height="1080" fill="url(#bg)"/>
   <rect width="1920" height="1080" fill="url(#glow)"/>
-  <g opacity="0.08" stroke="#ffffff" stroke-width="1" fill="none">
-    <circle cx="400" cy="800" r="120"/>
-    <circle cx="1500" cy="200" r="180"/>
-    <circle cx="1700" cy="900" r="90"/>
+  <g opacity="0.06">
+    <use href="#mark" transform="translate(120 120) scale(1.6)"/>
+    <use href="#mark" transform="translate(1380 620) scale(2.2)"/>
+    <use href="#mark" transform="translate(820 -60) scale(0.9)"/>
   </g>
 </svg>
