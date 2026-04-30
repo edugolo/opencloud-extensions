@@ -1,9 +1,24 @@
 {
   "name": "@opencloud/ai-sidebar",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "echo 'build not yet implemented'",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^5.0.0",
+    "pinia": "^3.0.4",
+    "@opencloud-eu/web-pkg": "^6.2.0"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0",
+    "@opencloud-eu/extension-sdk": "^6.1.0",
+    "typescript": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@opencloud-eu/web-pkg": "6.2.0"
   }
 }
