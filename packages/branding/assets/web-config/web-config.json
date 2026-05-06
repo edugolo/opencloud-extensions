@@ -31,7 +31,7 @@
     { "href": "themes/opencloud/inter.css" }
   ],
   "external_apps": [
-    { "id": "h5p-viewer", "path": "/external-apps/h5p-viewer/js/remoteEntry.mjs" },
-    { "id": "openclass-app", "path": "/external-apps/openclass-app/js/remoteEntry.mjs" }
+    { "id": "h5p-viewer", "path": "/assets/apps/h5p-viewer/js/remoteEntry.mjs" },
+    { "id": "openclass-app", "path": "/assets/apps/openclass-app/js/remoteEntry.mjs" }
   ]
 }
