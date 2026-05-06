@@ -1,0 +1,149 @@
+/*
+ * OpenCloud H5P Theme
+ * Injects OpenCloud design tokens + Inter font into H5P iframe content.
+ * Loaded via Lumi customization.global.styles[] (ADR-0011).
+ *
+ * Scope: cosmetisch (kleuren, fonts, borders, focus-states).
+ * Verboden: layout, sizing, absolute positionering (zie ADR-0011 §Scope-grens).
+ */
+
+/* ── Inter font ─────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/api/v1/h5p/theme/fonts/InterVariable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/api/v1/h5p/theme/fonts/InterVariable-Italic.woff2') format('woff2');
+}
+
+/* ── OpenCloud design tokens ────────────────────────────────────────────── */
+
+:root {
+  --oc-primary:          #00677f;
+  --oc-primary-hover:    #004e60;
+  --oc-on-primary:       #ffffff;
+  --oc-secondary:        #20434f;
+  --oc-surface:          #ffffff;
+  --oc-on-surface:       #191c1d;
+  --oc-on-surface-muted: #40484c;
+  --oc-outline:          #70787c;
+  --oc-outline-variant:  #bfc8cc;
+  --oc-error:            #ba1a1a;
+  --oc-radius:           0.5rem;
+  --oc-font:             'Inter', system-ui, sans-serif;
+}
+
+/* ── Base typography ────────────────────────────────────────────────────── */
+
+.h5p-content {
+  font-family: var(--oc-font) !important;
+  color: var(--oc-on-surface) !important;
+}
+
+.h5p-content h1,
+.h5p-content h2,
+.h5p-content h3,
+.h5p-content h4,
+.h5p-content h5,
+.h5p-content h6 {
+  font-family: var(--oc-font) !important;
+  color: var(--oc-on-surface) !important;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+
+.h5p-content .h5p-joubelui-button,
+.h5p-content .h5p-question-check-answer,
+.h5p-content .h5p-question-retry,
+.h5p-content .h5p-question-show-solution {
+  background-color: var(--oc-primary) !important;
+  color: var(--oc-on-primary) !important;
+  border: none !important;
+  border-radius: var(--oc-radius) !important;
+  font-family: var(--oc-font) !important;
+  font-weight: 500 !important;
+}
+
+.h5p-content .h5p-joubelui-button:hover,
+.h5p-content .h5p-question-check-answer:hover,
+.h5p-content .h5p-question-retry:hover,
+.h5p-content .h5p-question-show-solution:hover {
+  background-color: var(--oc-primary-hover) !important;
+}
+
+.h5p-content .h5p-joubelui-button:focus-visible,
+.h5p-content .h5p-question-check-answer:focus-visible,
+.h5p-content .h5p-question-retry:focus-visible,
+.h5p-content .h5p-question-show-solution:focus-visible {
+  outline: 2px solid var(--oc-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* ── Progress / score panels ────────────────────────────────────────────── */
+
+.h5p-content .h5p-question-feedback {
+  font-family: var(--oc-font) !important;
+}
+
+.h5p-content .h5p-joubelui-score-bar-progress {
+  background-color: var(--oc-primary) !important;
+}
+
+/* ── Input fields ───────────────────────────────────────────────────────── */
+
+.h5p-content input[type='text'],
+.h5p-content textarea,
+.h5p-content select {
+  font-family: var(--oc-font) !important;
+  border: 1px solid var(--oc-outline-variant) !important;
+  border-radius: calc(var(--oc-radius) / 2) !important;
+}
+
+.h5p-content input[type='text']:focus,
+.h5p-content textarea:focus,
+.h5p-content select:focus {
+  border-color: var(--oc-primary) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--oc-primary) 20%, transparent) !important;
+}
+
+/* ── Correct / incorrect feedback ──────────────────────────────────────── */
+
+.h5p-content .h5p-correct-icon,
+.h5p-content .correct {
+  color: var(--oc-primary) !important;
+}
+
+.h5p-content .h5p-wrong-icon,
+.h5p-content .wrong {
+  color: var(--oc-error) !important;
+}
+
+/* ── Dark mode ──────────────────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --oc-primary:          #5cd5fb;
+    --oc-primary-hover:    #b7eaff;
+    --oc-on-primary:       #003543;
+    --oc-surface:          #191c1d;
+    --oc-on-surface:       #e1e3e4;
+    --oc-on-surface-muted: #bfc8cc;
+    --oc-outline:          #8a9296;
+    --oc-outline-variant:  #40484c;
+    --oc-error:            #ffb4ab;
+  }
+
+  .h5p-content {
+    background-color: var(--oc-surface) !important;
+  }
+}
