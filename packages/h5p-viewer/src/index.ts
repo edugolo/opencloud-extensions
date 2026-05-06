@@ -1,1 +1,1 @@
-// placeholder — vervang bij implementatie
+export default await import('./bootstrap').then((m) => m.default)
