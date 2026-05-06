@@ -5,5 +5,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     target: 'esnext',
+    rollupOptions: {
+      output: {
+        entryFileNames: 'js/[name].mjs',
+        chunkFileNames: 'js/[name].mjs',
+      },
+    },
   },
 })
